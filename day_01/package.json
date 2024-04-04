@@ -1,17 +1,23 @@
 {
-  "name": "farm-task-manager",
-  "version": "1.0.0",
-  "description": "An API that creates, read, update, and delete tasks in the farm. ",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [
-    "Farm",
-    "Task",
-    "Management"
-  ],
-  "author": "Nathaniel Ezeanaka",
-  "license": "MIT"
+	"name": "farm-task-manager",
+	"version": "1.0.0",
+	"description": "An API that creates, read, update, and delete tasks in the farm. ",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon server.js"
+	},
+	"keywords": [
+		"Farm",
+		"Task",
+		"Management"
+	],
+	"author": "Nathaniel Ezeanaka",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.19.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.0"
+	}
 }
