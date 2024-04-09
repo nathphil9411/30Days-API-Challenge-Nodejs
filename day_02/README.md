@@ -1,4 +1,4 @@
-# Day 1: Todo CRUD API
+# Day 2: Todo CRUD API
 
 Day 2 of our 30 days Node.js API challenge! Everyone has equal 24hrs in a day but everyone results are different. This todo API would help in planing our day to day activities by oragnization out todos and mostimportantly outline how we can achieve our set out todos.
 Today we would create a Todo CRUD API, that could be able to create, read, update and delete todos.
