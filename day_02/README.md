@@ -12,7 +12,7 @@ The Todo API will allow users to perform the following operations:
 -Retrieve a collection of todos filtered by category
 -Update an existing todo
 -Delete a todo
--filter todo based on completion or priority
+-filter todo based on due date or priority
 
 ## Setup Instructions
 

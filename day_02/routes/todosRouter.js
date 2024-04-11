@@ -2,9 +2,18 @@ const express = require("express");
 const router = express.Router();
 const todoController = require("../controller/todocontroller");
 
-router.get("/", todoController.getAllTodos);
-router.get("/:id", todoController.getTodo);
-router.post("/", todoController.createTodo);
-router.patch("/:id", todoController.updateTodo);
-router.delete("/:id", todoController.deleteTodo);
+router
+	.route("/most-important-todos")
+	.get(todoController.alaisMostImportantTodos, todoController.getAllTodos);
+router
+	.route("/")
+	.get(todoController.getAllTodos)
+	.post(todoController.createTodo);
+
+router
+	.route("/:id")
+	.get(todoController.getTodo)
+	.patch(todoController.updateTodo)
+	.delete(todoController.deleteTodo);
+
 module.exports = router;
