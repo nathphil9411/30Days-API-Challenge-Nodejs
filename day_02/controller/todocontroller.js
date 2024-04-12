@@ -96,6 +96,7 @@ const alaisMostImportantTodos = (req, res, next) => {
 	req.query.priority = "high";
 	req.query.sort = "dueDate";
 	req.query.page = "1";
+	req.query.fields = "title,actions,dueDate";
 	next();
 };
 
