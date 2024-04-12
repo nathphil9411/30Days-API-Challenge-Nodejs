@@ -92,7 +92,7 @@ const deleteTodo = async (req, res) => {
 const alaisMostImportantTodos = (req, res, next) => {
 	const query = { priority: "high", completed: false };
 	req.query = { ...req.query, ...query };
-	req.query.limit = "5";
+	req.query.limit = "10";
 	req.query.priority = "high";
 	req.query.sort = "dueDate";
 	req.query.page = "1";
