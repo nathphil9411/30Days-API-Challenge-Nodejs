@@ -1,0 +1,17 @@
+{
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"mongodb": "4.0",
+		"mongoose": "^8.3.1"
+	},
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"name": "farm_registry",
+	"description": "Welcome to the third day of the 30 days api challenge, Today I would be working on a farm registry api. We would be working on authorization and normal CRUD operation. The farm registry app would be able to create, read, update and delete farm information and offcourse some routes would need authorization.",
+	"version": "1.0.0",
+	"main": "server.js",
+	"author": "Ezeanka Nathaniel",
+	"license": "MIT"
+}
