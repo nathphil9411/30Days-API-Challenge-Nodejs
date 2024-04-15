@@ -2,7 +2,24 @@ const Farm = require("./../models/farm");
 
 const getAllFarms = async (req, res) => {
 	try {
-		const allFarms = await Farm.find();
+		const queryObj = { ...req.query };
+		const excludedFields = ["fields", "page", "limit", "sort"];
+		excludedFields.forEach((field) => delete queryObj[field]);
+		let query = Farm.find(queryObj);
+		if (req.query.fields) {
+			fieldQuery = req.query.fields.split(",").join(" ");
+			query = query.select(fieldQuery);
+		} else {
+			query = query.select("-__v");
+		}
+		if (req.query.sort) {
+			sortQuery = req.query.sort.split(",").join(" ");
+			query = query.sort(sortQuery);
+		} else {
+			query = query.sort("-createdAt");
+		}
+
+		const allFarms = await query;
 		res.status(200).json({ status: "success", data: { allFarms } });
 	} catch (err) {
 		res.status(400).json({

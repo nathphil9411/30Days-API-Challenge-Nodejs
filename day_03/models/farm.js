@@ -19,5 +19,11 @@ const farmSchema = new mongoose.Schema({
 	farmSize: { type: Number },
 });
 
+farmSchema.pre("findOneAndUpdate", function (next) {
+	this._update.updatedAt = new Date();
+	this._update.description = `This is ${this._update.category} farm that is owned by ${this._update.owner}`;
+	next();
+});
+
 const Farm = mongoose.model("Farm", farmSchema);
 module.exports = Farm;
