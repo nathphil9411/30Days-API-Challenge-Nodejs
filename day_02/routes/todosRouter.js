@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const todoController = require("../controller/todocontroller");
 
+router.route("/stats").get(todoController.getTodoStats);
+
 router
 	.route("/most-important-todos")
 	.get(todoController.alaisMostImportantTodos, todoController.getAllTodos);

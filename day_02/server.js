@@ -17,4 +17,6 @@ mongoose
 		console.log("Sorry you are offline");
 	});
 
-app.listen(PORT, () => console.log(`connected on port ${PORT}`));
+app.listen(PORT, () =>
+	console.log(`connected on port ${PORT}`, process.env.NODE_ENV)
+);
