@@ -1,6 +1,6 @@
-# Day 1: Farm Registry App
+# Day 3: Farm Registry App
 
-Welcome to the third day of the 30 days api challenge, Today I would be working on a farm registry api. We would be working on authorization and normal CRUD operation. The farm registry app would be able to create, read, update and delete farm information and offcourse some routes would need authorization.
+Welcome to the third day of the 30 days api challenge, Today We would be working on a farm registry api. We would be working on authorization and normal CRUD operation. The farm registry app would be able to create, read, update and delete farm information and offcourse some routes would need authorization.
 
 ## Project Overview
 

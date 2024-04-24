@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
-//name email photo password confirmpassword
+//name email password
 const userSchema = new mongoose.Schema({
 	name: { type: String, required: [true, "name is needed"] },
 	email: {
@@ -9,10 +10,13 @@ const userSchema = new mongoose.Schema({
 		unique: true,
 		lowercase: true,
 	},
-	password: { type: Mixed, required: [true, "password is required"] },
-	password: { type: Mixed, required: [true, "Confirm your password "] },
+	password: { type: String, required: [true, "password is required"] },
 });
-
+userSchema.pre("save", async function (next) {
+	if (!this.isModified("password")) return next();
+	this.password = await bcrypt.hash(this.password, 12);
+	next();
+});
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
